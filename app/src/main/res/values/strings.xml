@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Transaction</string>
+    <string name="monthly_income">Your Monthly income - Rs %1$s</string>
+    <string name="per_day_income">Your Per day income - Rs %1$s</string>
+</resources>
