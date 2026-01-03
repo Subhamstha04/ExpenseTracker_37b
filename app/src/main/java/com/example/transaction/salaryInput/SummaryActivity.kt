@@ -1,12 +1,14 @@
-package com.example.transaction
+package com.example.transaction.salaryInput
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.transaction.R
 
 class SummaryActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_summary)
@@ -15,7 +17,6 @@ class SummaryActivity : AppCompatActivity() {
         val tvPerDay = findViewById<TextView>(R.id.tvPerDay)
         val btnPlan = findViewById<Button>(R.id.btnPlan)
 
-        // Get values from previous activity
         val monthly = intent.getStringExtra("monthly") ?: "0"
         val perDay = intent.getStringExtra("perDay") ?: "0"
 

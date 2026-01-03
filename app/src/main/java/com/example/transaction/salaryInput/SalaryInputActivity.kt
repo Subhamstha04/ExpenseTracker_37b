@@ -1,10 +1,12 @@
-package com.example.transaction
+package com.example.transaction.salaryInput
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.example.transaction.R
+
 
 class SalaryInputActivity : AppCompatActivity() {
 
@@ -20,11 +22,10 @@ class SalaryInputActivity : AppCompatActivity() {
             val monthly = etMonthly.text.toString()
             val perDay = etPerDay.text.toString()
 
-            if (monthly.isEmpty() || perDay.isEmpty()) {
-                if (monthly.isEmpty()) etMonthly.error = "Enter monthly salary"
-                if (perDay.isEmpty()) etPerDay.error = "Enter per day salary"
-                return@setOnClickListener
-            }
+            // Simple validation
+            if (monthly.isEmpty()) etMonthly.error = "Enter monthly salary"
+            if (perDay.isEmpty()) etPerDay.error = "Enter per day salary"
+            if (monthly.isEmpty() || perDay.isEmpty()) return@setOnClickListener
 
             val intent = Intent(this, SummaryActivity::class.java)
             intent.putExtra("monthly", monthly)
