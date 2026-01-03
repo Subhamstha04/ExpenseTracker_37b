@@ -26,7 +26,7 @@ fun SalaryInputScreen(
                 .fillMaxSize()
                 .padding(padding)
                 .padding(24.dp),
-            verticalArrangement = Arrangement.Center,
+            verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
@@ -36,7 +36,7 @@ fun SalaryInputScreen(
                 contentDescription = "Salary Banner",
                 modifier = Modifier
                     .width(150.dp)
-                    .height(150.dp)
+                    .height(260.dp)
             )
 
             Spacer(modifier = Modifier.height(24.dp))
