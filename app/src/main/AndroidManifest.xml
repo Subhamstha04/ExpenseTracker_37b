@@ -10,15 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Transaction">
 
-        <!-- Launcher activity -->
+        <!-- Main Menu (Launcher) -->
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.transaction.mainMenu.MainMenuActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Old MainActivity (keep for later or remove if unused) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
 
         <!-- Salary feature -->
         <activity
