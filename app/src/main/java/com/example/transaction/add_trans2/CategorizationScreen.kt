@@ -35,7 +35,7 @@ fun CategorizationScreen(viewModel: CategorizationViewModel = viewModel()) {
             Text(
                 text = "CATEGORIZATION",
                 color = Color.White,
-            fontSize = 30.sp,
+            fontSize = 29.sp,
                 fontWeight = FontWeight.Bold
             )
         }
