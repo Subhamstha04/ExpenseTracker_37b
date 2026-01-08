@@ -21,9 +21,14 @@
             </intent-filter>
         </activity>
 
-        <!-- Add Transaction (Compose screen) -->
+        <!-- Add Transaction (Compose screens) -->
         <activity
             android:name=".add_trans1.AddTrans1Activity"
+            android:exported="false"
+            android:theme="@style/Theme.Transaction" />
+
+        <activity
+            android:name=".add_trans2.CategorizationActivity"
             android:exported="false"
             android:theme="@style/Theme.Transaction" />
 
