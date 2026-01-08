@@ -2,19 +2,18 @@ package com.example.transaction
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import com.example.transaction.graphHistory.GraphActivity
+import androidx.activity.ComponentActivity
+import com.example.transaction.add_trans1.AddTrans1Activity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Launch GraphActivity
-        val intent = Intent(this, GraphActivity::class.java)
-        startActivity(intent)
+        // Safely start AddTrans1Activity
+        startActivity(Intent(this, AddTrans1Activity::class.java))
 
-        // Close MainActivity so user can't go back to it
+        // Finish MainActivity if you don't want it in back stack
         finish()
     }
 }

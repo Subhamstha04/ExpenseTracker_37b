@@ -1,52 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="30dp"
-    android:gravity="center"
-    android:background="#98FB98"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#98FB98"
+    android:fillViewport="true">
 
-    <!-- Icon or image for salary screen -->
-    <ImageView
-        android:id="@+id/salaryIcon"
-        android:src="@drawable/bucket_pic"
-        android:layout_width="150dp"
-        android:layout_height="150dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <!-- Title -->
-    <TextView
-        android:text="ENTER YOUR SALARY"
-        android:textStyle="bold"
-        android:textSize="22sp"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <!-- Image / icon at top -->
+        <ImageView
+            android:id="@+id/salaryIcon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/bucket_pic"
+            android:contentDescription="Salary Icon" />
 
-    <!-- Monthly salary input -->
-    <EditText
-        android:id="@+id/etMonthly"
-        android:hint="Monthly (Rs)"
-        android:inputType="number"
-        android:layout_marginTop="40dp"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"/>
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ENTER YOUR SALARY"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
 
-    <!-- Per day salary input -->
-    <EditText
-        android:id="@+id/etPerDay"
-        android:hint="Per day (Rs)"
-        android:inputType="number"
-        android:layout_marginTop="20dp"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"/>
+        <!-- Monthly salary input -->
+        <EditText
+            android:id="@+id/etMonthly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:hint="Monthly (Rs)"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"/>
 
-    <!-- Next button -->
-    <Button
-        android:id="@+id/btnNext"
-        android:text="Next"
-        android:layout_marginTop="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+        <!-- Per day salary input -->
+        <EditText
+            android:id="@+id/etPerDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Per day (Rs)"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"/>
+
+        <!-- Next button -->
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:layout_marginTop="30dp"/>
+    </LinearLayout>
+</ScrollView>
