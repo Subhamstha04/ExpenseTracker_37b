@@ -19,19 +19,20 @@ import com.example.transaction.R
 @Composable
 fun AddTrans1Screen(
     viewModel: AddTrans1ViewModel,
-    onBackClick: () -> Unit
+    onBackClick: () -> Unit,
+    onPlanClick: () -> Unit // ✅ Added this parameter for navigation
 ) {
-    // ✅ Collect state from ViewModel
+    // Collect state from ViewModel
     val monthlyIncome by viewModel.monthlyIncome.collectAsState()
     val dailyIncome by viewModel.dailyIncome.collectAsState()
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFB3E5FC)) // light sky-blue
+            .background(Color(0xFFB3E5FC)) // Light sky-blue
     ) {
 
-        // 🔶 Header
+        // Header
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -49,7 +50,7 @@ fun AddTrans1Screen(
             )
         }
 
-        // ⬅ Back Button
+        // Back Button
         IconButton(
             onClick = onBackClick,
             modifier = Modifier.padding(16.dp)
@@ -62,7 +63,7 @@ fun AddTrans1Screen(
 
         Spacer(modifier = Modifier.height(40.dp))
 
-        // 🐷 Piggy Bank Box
+        // Piggy Bank Box
         Box(
             modifier = Modifier.fillMaxWidth(),
             contentAlignment = Alignment.Center
@@ -77,24 +78,21 @@ fun AddTrans1Screen(
                     painter = painterResource(id = R.drawable.piggy_pic),
                     contentDescription = "Piggy Bank",
                     modifier = Modifier.size(width = 350.dp, height = 400.dp)
-
                 )
             }
         }
 
         Spacer(modifier = Modifier.weight(1f))
 
-        // 🔴 Call To Action Button
+        // "What's your plan today?" Button
         Button(
-            onClick = { /* Navigate later */ },
+            onClick = onPlanClick, // ✅ Calls the lambda passed from Activity
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(24.dp)
-                .offset(y = (-190).dp) // moves it 50dp up
+                .offset(y = (-190).dp) // Moves button up
                 .height(76.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFF8D4A3A)
-            ),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF8D4A3A)),
             shape = RoundedCornerShape(12.dp)
         ) {
             Text(
