@@ -6,8 +6,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -18,47 +16,32 @@ import com.example.transaction.R
 
 @Composable
 fun AddTrans1Screen(
-    viewModel: AddTrans1ViewModel,
-    onBackClick: () -> Unit,
-    onPlanClick: () -> Unit // ✅ Added this parameter for navigation
+    monthlyIncome: Double,
+    dailyIncome: Double,
+    onPlanClick: () -> Unit,
+    onBackClick: () -> Unit
 ) {
-    // Collect state from ViewModel
-    val monthlyIncome by viewModel.monthlyIncome.collectAsState()
-    val dailyIncome by viewModel.dailyIncome.collectAsState()
-
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFB3E5FC)) // Light sky-blue
+            .background(Color(0xFFB3E5FC))
     ) {
 
         // Header
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color(0xFFFFEB3B)) // Yellow
+                .background(Color(0xFFFFEB3B))
                 .padding(28.dp)
         ) {
-            Text(
-                text = "Your Monthly Income: $monthlyIncome",
-                fontSize = 21.sp
-            )
+            Text(text = "Your Monthly Income: $monthlyIncome", fontSize = 21.sp)
             Spacer(modifier = Modifier.height(6.dp))
-            Text(
-                text = "Your Per Day Income: $dailyIncome",
-                fontSize = 21.sp
-            )
+            Text(text = "Your Per Day Income: $dailyIncome", fontSize = 21.sp)
         }
 
-        // Back Button
-        IconButton(
-            onClick = onBackClick,
-            modifier = Modifier.padding(16.dp)
-        ) {
-            Icon(
-                painter = painterResource(id = android.R.drawable.ic_media_previous),
-                contentDescription = "Back"
-            )
+        // Back button
+        IconButton(onClick = onBackClick, modifier = Modifier.padding(16.dp)) {
+            Icon(painter = painterResource(id = android.R.drawable.ic_media_previous), contentDescription = "Back")
         }
 
         Spacer(modifier = Modifier.height(40.dp))
@@ -77,29 +60,24 @@ fun AddTrans1Screen(
                 Image(
                     painter = painterResource(id = R.drawable.piggy_pic),
                     contentDescription = "Piggy Bank",
-                    modifier = Modifier.size(width = 350.dp, height = 400.dp)
+                    modifier = Modifier.size(350.dp, 400.dp)
                 )
             }
         }
 
         Spacer(modifier = Modifier.weight(1f))
 
-        // "What's your plan today?" Button
+        // Plan button
         Button(
-            onClick = onPlanClick, // ✅ Calls the lambda passed from Activity
+            onClick = onPlanClick,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(24.dp)
-                .offset(y = (-190).dp) // Moves button up
                 .height(76.dp),
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF8D4A3A)),
             shape = RoundedCornerShape(12.dp)
         ) {
-            Text(
-                text = "What's your plan today?",
-                color = Color.White,
-                fontSize = 20.sp
-            )
+            Text(text = "What's your plan today?", color = Color.White, fontSize = 20.sp)
         }
     }
 }

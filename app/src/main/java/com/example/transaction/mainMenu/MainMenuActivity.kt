@@ -6,8 +6,9 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.transaction.R
 import com.example.transaction.add_trans1.AddTrans1Activity
-import com.example.transaction.view_exp.ViewExpenseActivity
 import com.example.transaction.graphHistory.GraphActivity
+import com.example.transaction.salaryInput.SalaryInputActivity
+import com.example.transaction.view_exp.ViewExpenseActivity
 
 class MainMenuActivity : AppCompatActivity() {
 
@@ -20,24 +21,27 @@ class MainMenuActivity : AppCompatActivity() {
         val btnGraph = findViewById<Button>(R.id.btnGraph)
         val btnTutorial = findViewById<Button>(R.id.btnTutorial)
 
-        // 1️⃣ Add Transaction → AddTrans1Activity
+        // 1️⃣ Add Transaction → SalaryInputActivity first
         btnAdd.setOnClickListener {
-            startActivity(Intent(this, AddTrans1Activity::class.java))
+            val intent = Intent(this, SalaryInputActivity::class.java)
+            startActivity(intent)
         }
 
         // 2️⃣ View Expenses → ViewExpenseActivity
         btnView.setOnClickListener {
-            startActivity(Intent(this, ViewExpenseActivity::class.java))
+            val intent = Intent(this, ViewExpenseActivity::class.java)
+            startActivity(intent)
         }
 
         // 3️⃣ Graph & History → GraphActivity
         btnGraph.setOnClickListener {
-            startActivity(Intent(this, GraphActivity::class.java))
+            val intent = Intent(this, GraphActivity::class.java)
+            startActivity(intent)
         }
 
-        // 4️⃣ Tutorial → TODO: implement later
+        // 4️⃣ Tutorial → TODO
         btnTutorial.setOnClickListener {
-            // TODO: Navigate to tutorial screen
+            // TODO: Add tutorial navigation
         }
     }
 }
