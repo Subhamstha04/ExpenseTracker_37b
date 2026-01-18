@@ -1,14 +1,14 @@
 package com.example.transaction.dashboard
 
+import com.example.transaction.R
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -19,27 +19,29 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.transaction.R
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
 fun DashboardScreen(
-    uiState: DashboardUiState,
-    onLoginClicked: () -> Unit
+    viewModel: DashboardViewModel = viewModel()
 ) {
-    Scaffold(containerColor = Color(0xFFFFC0CB)) { innerPadding ->
+    val uiState by viewModel.uiState.collectAsState()
 
+    Scaffold(
+        containerColor = Color(0xFFFFC0CB) // Pink background
+    ) { padding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(innerPadding)
+                .padding(padding)
                 .padding(horizontal = 16.dp)
         ) {
 
-            // HEADER
+            // -------------------- HEADER --------------------
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(0xFFFFC0CB))
+                    .background(Color(0xFFFFC0CB)) // Pink
                     .padding(vertical = 32.dp),
                 contentAlignment = Alignment.Center
             ) {
@@ -48,7 +50,7 @@ fun DashboardScreen(
                         text = uiState.welcomeTitle,
                         fontSize = 40.sp,
                         fontWeight = FontWeight.ExtraBold,
-                        color = Color(0xFF00FF00),
+                        color = Color(0xFF00FF00), // Green
                         textAlign = TextAlign.Center
                     )
                     Spacer(modifier = Modifier.height(4.dp))
@@ -56,18 +58,18 @@ fun DashboardScreen(
                         modifier = Modifier
                             .height(4.dp)
                             .width(120.dp)
-                            .background(Color(0xFF0000FF))
+                            .background(Color(0xFF0000FF)) // Blue underline
                     )
                 }
             }
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // MAIN TEXT
+            // -------------------- MAIN TEXT --------------------
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color(0xFF008080))
+                    .background(Color(0xFF008080)) // Teal
                     .padding(16.dp)
             ) {
                 Text(
@@ -80,7 +82,7 @@ fun DashboardScreen(
 
             Spacer(modifier = Modifier.height(32.dp))
 
-            // BANNER IMAGE
+            // -------------------- BANNER IMAGE --------------------
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -88,7 +90,7 @@ fun DashboardScreen(
                 contentAlignment = Alignment.Center
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.piggy_pic),
+                    painter = painterResource(id = R.drawable.piggy_pic), // Replace with your image
                     contentDescription = "Financial Road Banner",
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
@@ -108,9 +110,9 @@ fun DashboardScreen(
 
             Spacer(modifier = Modifier.weight(1f))
 
-            // LOGIN/REGISTER BUTTON
+            // -------------------- LOGIN BUTTON --------------------
             Button(
-                onClick = onLoginClicked,
+                onClick = { viewModel.onLoginClicked() },
                 colors = ButtonDefaults.buttonColors(containerColor = Color.Red),
                 modifier = Modifier
                     .fillMaxWidth()
