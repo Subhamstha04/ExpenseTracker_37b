@@ -50,7 +50,7 @@
             android:id="@+id/btnAdd"
             android:textSize="15sp"
             android:paddingHorizontal="18dp"
-            android:paddingVertical="16dp"
+            android:paddingVertical="11dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ADD\nTRANSACTION"
@@ -59,10 +59,10 @@
 
         <Button
             android:id="@+id/btnView"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="7dp"
+            android:paddingHorizontal="5dp"
             android:paddingVertical="22dp"
             android:text="View expenses"
             android:textColor="#000000"
@@ -71,11 +71,11 @@
 
         <Button
             android:id="@+id/btnGraph"
-            android:textSize="21sp"
+            android:textSize="15sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Graph+History"
-            android:paddingHorizontal="22dp"
+            android:paddingHorizontal="17dp"
             android:paddingVertical="17dp"
             android:textColor="#000000"
             android:backgroundTint="#E6FF5C"

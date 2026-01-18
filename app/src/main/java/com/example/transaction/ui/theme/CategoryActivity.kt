@@ -25,14 +25,13 @@ class CategoryActivity : AppCompatActivity() {
         backBtn.setOnClickListener { finish() }
 
         btnAdd.setOnClickListener {
-            val item = etItem.text.toString()
-            val price = etPrice.text.toString()
+            val item = etItem.text.toString().trim()
+            val price = etPrice.text.toString().trim()
 
             if (item.isNotEmpty() && price.isNotEmpty()) {
                 listText += "$count. $item - Rs $price\n"
                 listArea.text = listText
                 count++
-
                 etItem.text.clear()
                 etPrice.text.clear()
             }

@@ -2,16 +2,17 @@ package com.example.transaction
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import com.example.transaction.mainMenu.MainMenuActivity
+import androidx.activity.ComponentActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Launch Main Menu screen
-        startActivity(Intent(this, MainMenuActivity::class.java))
-        finish() // Close MainActivity so user can't return here
+        // Launch Dashboard first
+        startActivity(Intent(this, com.example.transaction.dashboard.DashboardActivity::class.java))
+
+        // Close launcher so back button won't return here
+        finish()
     }
 }

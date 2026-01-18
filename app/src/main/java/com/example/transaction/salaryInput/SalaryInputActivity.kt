@@ -2,35 +2,52 @@ package com.example.transaction.salaryInput
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import androidx.appcompat.app.AppCompatActivity
-import com.example.transaction.R
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import com.example.transaction.add_trans1.AddTrans1Activity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
+class SalaryInputActivity : ComponentActivity() {
 
-class SalaryInputActivity : AppCompatActivity() {
+    private val auth = FirebaseAuth.getInstance()
+    private val firestore = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_salary_input)
 
-        val etMonthly = findViewById<EditText>(R.id.etMonthly)
-        val etPerDay = findViewById<EditText>(R.id.etPerDay)
-        val btnNext = findViewById<Button>(R.id.btnNext)
+        setContent {
+            SalaryInputScreen(
 
-        btnNext.setOnClickListener {
-            val monthly = etMonthly.text.toString()
-            val perDay = etPerDay.text.toString()
+                // Option 1: Save & Continue
+                onSaveAndContinue = { monthly, perDay ->
+                    val user = auth.currentUser ?: return@SalaryInputScreen
 
-            // Simple validation
-            if (monthly.isEmpty()) etMonthly.error = "Enter monthly salary"
-            if (perDay.isEmpty()) etPerDay.error = "Enter per day salary"
-            if (monthly.isEmpty() || perDay.isEmpty()) return@setOnClickListener
+                    firestore.collection("users")
+                        .document(user.uid)
+                        .set(
+                            mapOf(
+                                "monthly" to monthly,
+                                "perDay" to perDay
+                            ),
+                            com.google.firebase.firestore.SetOptions.merge()
+                        )
+                        .addOnSuccessListener {
+                            startActivity(
+                                Intent(this, AddTrans1Activity::class.java)
+                            )
+                            finish()
+                        }
+                },
 
-            val intent = Intent(this, SummaryActivity::class.java)
-            intent.putExtra("monthly", monthly)
-            intent.putExtra("perDay", perDay)
-            startActivity(intent)
+                // Option 2: Continue without change
+                onContinueWithoutChange = {
+                    startActivity(
+                        Intent(this, AddTrans1Activity::class.java)
+                    )
+                    finish()
+                }
+            )
         }
     }
 }

@@ -10,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Transaction">
 
-        <!-- Main Menu (Launcher) -->
+        <!-- Launcher: Login Activity -->
         <activity
-            android:name="com.example.transaction.mainMenu.MainMenuActivity"
+            android:name=".login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,24 +20,71 @@
             </intent-filter>
         </activity>
 
-        <!-- Old MainActivity (keep for later or remove if unused) -->
+        <!-- Register Activity -->
+        <activity
+            android:name=".register.RegisterActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Dashboard Activity -->
+        <activity
+            android:name=".dashboard.DashboardActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Add Transaction -->
+        <activity
+            android:name=".add_trans1.AddTrans1Activity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Categorization -->
+        <activity
+            android:name=".add_trans2.CategorizationActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Graph & History -->
+        <activity
+            android:name=".graphHistory.GraphActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- View Expenses -->
+        <activity
+            android:name=".view_exp.ViewExpenseActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Salary Input Activities -->
+        <activity
+            android:name=".salaryInput.SalaryInputActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <activity
+            android:name=".salaryInput.SummaryActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Category -->
+        <activity
+            android:name=".CategoryActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Main Menu -->
+        <activity
+            android:name=".mainMenu.MainMenuActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Optional: MainActivity (launcher redirect or splash) -->
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
-
-        <!-- Salary feature -->
-        <activity
-            android:name="com.example.transaction.salaryInput.SalaryInputActivity"
-            android:exported="true" />
-
-        <activity
-            android:name="com.example.transaction.salaryInput.SummaryActivity"
-            android:exported="true" />
-
-        <!-- Category feature -->
-        <activity
-            android:name="com.example.transaction.CategoryActivity"
-            android:exported="true" />
+            android:exported="false"
+            android:theme="@style/Theme.Transaction" />
 
     </application>
 
