@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CFEDE6">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="READY TO TRACK EXPENSES ?"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/imgExpense"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:src="@drawable/pic3"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="4:3"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="24dp"/>
+
+
+    <!-- Middle buttons -->
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/imgExpense"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:textSize="15sp"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="11dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD\nTRANSACTION"
+            android:textColor="#000000"
+            android:backgroundTint="#FF6F6F"/>
+
+        <Button
+            android:id="@+id/btnView"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="22dp"
+            android:text="View expenses"
+            android:textColor="#000000"
+            android:backgroundTint="#6DFF6D"
+            android:layout_marginStart="8dp"/>
+
+        <Button
+            android:id="@+id/btnGraph"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Graph+History"
+            android:paddingHorizontal="17dp"
+            android:paddingVertical="17dp"
+            android:textColor="#000000"
+            android:backgroundTint="#E6FF5C"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Tutorial -->
+    <Button
+        android:id="@+id/btnTutorial"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="APP USE TUTORIAL"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="14dp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4C78FF"
+        app:layout_constraintTop_toBottomOf="@id/llButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

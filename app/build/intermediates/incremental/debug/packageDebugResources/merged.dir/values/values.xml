@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">Transaction</string>
+    <string name="default_web_client_id" translatable="false">1008619300235-m8is5ap51p91g1ofukdpoqhj30cb0jov.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1008619300235</string>
+    <string name="google_api_key" translatable="false">AIzaSyDcantxhWHWlUkIcAK1LPap3olVyB8MTsM</string>
+    <string name="google_app_id" translatable="false">1:1008619300235:android:dcd7e1f7af000304bffb8e</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDcantxhWHWlUkIcAK1LPap3olVyB8MTsM</string>
+    <string name="google_storage_bucket" translatable="false">expensetracker-cf06e.firebasestorage.app</string>
+    <string name="monthly_income">Your Monthly income - Rs %1$s</string>
+    <string name="per_day_income">Your Per day income - Rs %1$s</string>
+    <string name="project_id" translatable="false">expensetracker-cf06e</string>
+    <style name="Theme.Transaction" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
