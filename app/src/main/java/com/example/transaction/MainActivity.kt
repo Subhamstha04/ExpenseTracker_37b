@@ -9,9 +9,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Launch MainMenuActivity
-        val intent = Intent(this, com.example.transaction.mainMenu.MainMenuActivity::class.java)
-        startActivity(intent)
-        finish() // close MainActivity so back button doesn't return here
+        // Launch Dashboard first
+        startActivity(Intent(this, com.example.transaction.dashboard.DashboardActivity::class.java))
+
+        // Close launcher so back button won't return here
+        finish()
     }
 }

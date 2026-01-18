@@ -4,27 +4,25 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.transaction.add_trans2.CategorizationActivity
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import com.example.transaction.add_trans2.CategorizationActivity
 
 class AddTrans1Activity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Get salary from intent
-        val monthly = intent.getDoubleExtra("monthly", 0.0)
-        val perDay = intent.getDoubleExtra("perDay", 0.0)
-
         setContent {
+            val viewModel: AddTrans1ViewModel = viewModel()
+
             MaterialTheme {
                 Surface(color = MaterialTheme.colorScheme.background) {
                     AddTrans1Screen(
-                        monthlyIncome = monthly,
-                        dailyIncome = perDay,
+                        viewModel = viewModel,
                         onPlanClick = {
-                            // Navigate to AddTrans2 (CategorizationActivity)
+                            // Navigate to CategorizationActivity
                             startActivity(Intent(this, CategorizationActivity::class.java))
                         },
                         onBackClick = { finish() }

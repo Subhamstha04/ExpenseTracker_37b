@@ -10,15 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Transaction">
 
-        <!-- Main launcher activity -->
+        <!-- Launcher: Login Activity -->
         <activity
-            android:name=".MainActivity"
+            android:name=".login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Register Activity -->
+        <activity
+            android:name=".register.RegisterActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Dashboard Activity -->
+        <activity
+            android:name=".dashboard.DashboardActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
 
         <!-- Add Transaction -->
         <activity
@@ -39,7 +51,7 @@
             android:exported="true"
             android:theme="@style/Theme.Transaction" />
 
-        <!-- View Expenses (Fix added!) -->
+        <!-- View Expenses -->
         <activity
             android:name=".view_exp.ViewExpenseActivity"
             android:exported="true"
@@ -66,6 +78,12 @@
         <activity
             android:name=".mainMenu.MainMenuActivity"
             android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Optional: MainActivity (launcher redirect or splash) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
             android:theme="@style/Theme.Transaction" />
 
     </application>

@@ -5,48 +5,71 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.transaction.R
 
 @Composable
 fun AddTrans1Screen(
-    monthlyIncome: Double,
-    dailyIncome: Double,
+    viewModel: AddTrans1ViewModel = viewModel(),
     onPlanClick: () -> Unit,
     onBackClick: () -> Unit
 ) {
+    val monthlyIncome by viewModel.monthlyIncome.collectAsState()
+    val dailyIncome by viewModel.dailyIncome.collectAsState()
+    val errorMessage by viewModel.errorMessage.collectAsState()
+
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFB3E5FC))
+            .background(Color(0xFFB3E5FC)),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
-        // Header
+        // Header with salary
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .background(Color(0xFFFFEB3B))
                 .padding(28.dp)
         ) {
-            Text(text = "Your Monthly Income: $monthlyIncome", fontSize = 21.sp)
+            Text(
+                text = "Your Monthly Income: $monthlyIncome",
+                fontSize = 21.sp
+            )
             Spacer(modifier = Modifier.height(6.dp))
-            Text(text = "Your Per Day Income: $dailyIncome", fontSize = 21.sp)
+            Text(
+                text = "Your Per Day Income: $dailyIncome",
+                fontSize = 21.sp
+            )
+        }
+
+        // Show error if any
+        errorMessage?.let {
+            Text(
+                text = it,
+                color = Color.Red,
+                fontSize = 18.sp,
+                modifier = Modifier.padding(8.dp)
+            )
         }
 
         // Back button
         IconButton(onClick = onBackClick, modifier = Modifier.padding(16.dp)) {
-            Icon(painter = painterResource(id = android.R.drawable.ic_media_previous), contentDescription = "Back")
+            Icon(
+                painter = painterResource(id = android.R.drawable.ic_media_previous),
+                contentDescription = "Back"
+            )
         }
 
         Spacer(modifier = Modifier.height(40.dp))
 
-        // Piggy Bank Box
+        // Piggy bank image
         Box(
             modifier = Modifier.fillMaxWidth(),
             contentAlignment = Alignment.Center
@@ -60,7 +83,7 @@ fun AddTrans1Screen(
                 Image(
                     painter = painterResource(id = R.drawable.piggy_pic),
                     contentDescription = "Piggy Bank",
-                    modifier = Modifier.size(350.dp, 400.dp)
+                    modifier = Modifier.size(180.dp)
                 )
             }
         }
@@ -77,7 +100,11 @@ fun AddTrans1Screen(
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF8D4A3A)),
             shape = RoundedCornerShape(12.dp)
         ) {
-            Text(text = "What's your plan today?", color = Color.White, fontSize = 20.sp)
+            Text(
+                text = "What's your plan today?",
+                color = Color.White,
+                fontSize = 20.sp
+            )
         }
     }
 }

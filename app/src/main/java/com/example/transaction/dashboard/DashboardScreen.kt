@@ -9,8 +9,6 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -21,16 +19,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.transaction.R
 
 @Composable
 fun DashboardScreen(
-    viewModel: DashboardViewModel = viewModel()
+    uiState: DashboardUiState,
+    onLoginClicked: () -> Unit
 ) {
-    val uiState by viewModel.uiState.collectAsState()
-
-    Scaffold(containerColor = Color(0xFFFFC0CB)) { innerPadding: PaddingValues ->
+    Scaffold(containerColor = Color(0xFFFFC0CB)) { innerPadding ->
 
         Column(
             modifier = Modifier
@@ -112,9 +108,9 @@ fun DashboardScreen(
 
             Spacer(modifier = Modifier.weight(1f))
 
-            // LOGIN BUTTON
+            // LOGIN/REGISTER BUTTON
             Button(
-                onClick = { viewModel.onLoginClicked() },
+                onClick = onLoginClicked,
                 colors = ButtonDefaults.buttonColors(containerColor = Color.Red),
                 modifier = Modifier
                     .fillMaxWidth()
