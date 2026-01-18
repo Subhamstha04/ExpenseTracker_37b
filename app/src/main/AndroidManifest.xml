@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.transaction">
 
     <application
         android:allowBackup="true"
@@ -7,11 +8,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ExpenseTrackerIshan">
+        android:theme="@style/Theme.Transaction">
 
-        <!-- Launcher Activity -->
+        <!-- Launcher: Login Activity -->
         <activity
-            android:name=".MainActivity"
+            android:name=".login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,15 +20,71 @@
             </intent-filter>
         </activity>
 
-        <!-- Salary Input Screen -->
+        <!-- Register Activity -->
         <activity
-            android:name=".transaction.SalaryInputActivity"
-            android:exported="false" />
+            android:name=".register.RegisterActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
 
-        <!-- Summary Screen -->
+        <!-- Dashboard Activity -->
         <activity
-            android:name=".transaction.SummaryActivity"
-            android:exported="false" />
+            android:name=".dashboard.DashboardActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Add Transaction -->
+        <activity
+            android:name=".add_trans1.AddTrans1Activity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Categorization -->
+        <activity
+            android:name=".add_trans2.CategorizationActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Graph & History -->
+        <activity
+            android:name=".graphHistory.GraphActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- View Expenses -->
+        <activity
+            android:name=".view_exp.ViewExpenseActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Salary Input Activities -->
+        <activity
+            android:name=".salaryInput.SalaryInputActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <activity
+            android:name=".salaryInput.SummaryActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Category -->
+        <activity
+            android:name=".CategoryActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Main Menu -->
+        <activity
+            android:name=".mainMenu.MainMenuActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- Optional: MainActivity (launcher redirect or splash) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Transaction" />
 
     </application>
 
