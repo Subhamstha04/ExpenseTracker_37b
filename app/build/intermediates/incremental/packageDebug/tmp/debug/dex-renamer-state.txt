@@ -1,4 +1,4 @@
-#Sat Jan 17 22:12:10 NPT 2026
+#Mon Jan 19 18:52:25 NPT 2026
 base.0=C\:\\Users\\regmi\\AndroidStudioProjects\\ExpenseTracker_37b\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\regmi\\AndroidStudioProjects\\ExpenseTracker_37b\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\Users\\regmi\\AndroidStudioProjects\\ExpenseTracker_37b\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex

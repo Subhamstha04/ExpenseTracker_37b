@@ -13,9 +13,8 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun ExpenseItem(
-    expense: ViewExpenseViewModel.Expense
+    expense: Expense
 ) {
-
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -23,31 +22,18 @@ fun ExpenseItem(
         elevation = CardDefaults.cardElevation(4.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White)
     ) {
-
         Row(
-            modifier = Modifier.padding(16.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
 
-            Column {
-                Text(
-                    text = expense.title,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.SemiBold
-                )
-
-                Text(
-                    text = expense.category,
-                    fontSize = 13.sp,
-                    color = Color.Gray
-                )
-
-                Text(
-                    text = expense.date,
-                    fontSize = 12.sp,
-                    color = Color.Gray
-                )
-            }
+            Text(
+                text = expense.title,
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Medium
+            )
 
             Text(
                 text = "₹ ${expense.amount}",

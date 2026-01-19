@@ -13,10 +13,8 @@ class ViewExpenseActivity : ComponentActivity() {
 
         setContent {
             MaterialTheme {
-                Surface(
-                    color = MaterialTheme.colorScheme.background // or Color(0xFFB3E5FC) if you want light blue
-                ) {
-                    ViewExpenseScreen() // Compose screen showing expenses
+                Surface {
+                    ViewExpenseScreen()
                 }
             }
         }

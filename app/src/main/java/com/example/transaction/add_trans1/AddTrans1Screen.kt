@@ -101,7 +101,7 @@ fun AddTrans1Screen(
             shape = RoundedCornerShape(12.dp)
         ) {
             Text(
-                text = "What's your plan today?",
+                text = "Start Recording",
                 color = Color.White,
                 fontSize = 20.sp
             )
