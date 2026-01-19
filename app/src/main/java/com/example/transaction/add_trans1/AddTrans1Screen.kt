@@ -101,7 +101,7 @@ fun AddTrans1Screen(
             shape = RoundedCornerShape(12.dp)
         ) {
             Text(
-                text = "Start Recording Transactions",
+                text = "Record and see your Transactions",
                 color = Color.White,
                 fontSize = 20.sp
             )
