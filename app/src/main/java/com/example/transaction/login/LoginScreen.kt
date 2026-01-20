@@ -55,7 +55,7 @@ fun LoginScreen(
                 value = email,
                 onValueChange = { email = it },
                 label = { Text("Email") },
-                placeholder = { Text("abc@gmail.com") },
+                placeholder = { Text("xyz@gmail.com") },
                 shape = RoundedCornerShape(12.dp),
                 modifier = Modifier.fillMaxWidth()
             )
