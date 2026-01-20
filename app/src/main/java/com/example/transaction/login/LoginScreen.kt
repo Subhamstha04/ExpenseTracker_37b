@@ -92,7 +92,7 @@ fun LoginScreen(
                     .height(55.dp),
                 shape = RoundedCornerShape(12.dp)
             ) {
-                Text("Login", fontSize = 18.sp)
+                Text("Log in", fontSize = 18.sp)
             }
 
             Spacer(modifier = Modifier.height(16.dp))
