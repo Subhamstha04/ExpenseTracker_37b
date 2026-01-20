@@ -101,7 +101,7 @@ fun LoginScreen(
             TextButton(
                 onClick = { onSignUpClicked() }
             ) {
-                Text("Don't have ann account? Sign Up", color = Color.Blue)
+                Text("Don't have an account? Sign Up", color = Color.Blue)
             }
         }
     }
