@@ -35,10 +35,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.Transaction" >
 
-        <!-- Launcher: Login Activity -->
+        <!-- 🚀 LAUNCHER / ROUTER ACTIVITY -->
+        <!-- Decides Dashboard vs MainMenu -->
         <activity
-            android:name="com.example.transaction.login.LoginActivity"
-            android:exported="true" >
+            android:name="com.example.transaction.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -46,44 +48,44 @@
             </intent-filter>
         </activity>
 
-        <!-- Register Activity -->
-        <activity
-            android:name="com.example.transaction.register.RegisterActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
-
-        <!-- Dashboard Activity -->
+        <!-- 🏠 DASHBOARD (before login) -->
         <activity
             android:name="com.example.transaction.dashboard.DashboardActivity"
             android:exported="true"
             android:theme="@style/Theme.Transaction" />
 
-        <!-- Add Transaction -->
+        <!-- 🔐 LOGIN -->
+        <activity
+            android:name="com.example.transaction.login.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- 📝 REGISTER -->
+        <activity
+            android:name="com.example.transaction.register.RegisterActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- 📋 MAIN MENU (after login) -->
+        <activity
+            android:name="com.example.transaction.mainMenu.MainMenuActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- ➕ ADD TRANSACTION (salary display) -->
         <activity
             android:name="com.example.transaction.add_trans1.AddTrans1Activity"
             android:exported="true"
             android:theme="@style/Theme.Transaction"
             android:windowSoftInputMode="adjustResize" />
 
-        <!-- Categorization -->
+        <!-- 🧮 CATEGORIZATION -->
         <activity
             android:name="com.example.transaction.add_trans2.CategorizationActivity"
             android:exported="true"
             android:theme="@style/Theme.Transaction" />
 
-        <!-- Graph & History -->
-        <activity
-            android:name="com.example.transaction.graphHistory.GraphActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
-
-        <!-- View Expenses -->
-        <activity
-            android:name="com.example.transaction.view_exp.ViewExpenseActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
-
-        <!-- Salary Input Activities -->
+        <!-- 💰 SALARY INPUT -->
         <activity
             android:name="com.example.transaction.salaryInput.SalaryInputActivity"
             android:exported="true"
@@ -93,22 +95,22 @@
             android:exported="true"
             android:theme="@style/Theme.Transaction" />
 
-        <!-- Category -->
+        <!-- 📊 GRAPH & HISTORY -->
+        <activity
+            android:name="com.example.transaction.graphHistory.GraphActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- 👀 VIEW EXPENSE -->
+        <activity
+            android:name="com.example.transaction.view_exp.ViewExpenseActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- 🗂 CATEGORY -->
         <activity
             android:name="com.example.transaction.CategoryActivity"
             android:exported="true"
-            android:theme="@style/Theme.Transaction" />
-
-        <!-- Main Menu -->
-        <activity
-            android:name="com.example.transaction.mainMenu.MainMenuActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
-
-        <!-- Optional: MainActivity (launcher redirect or splash) -->
-        <activity
-            android:name="com.example.transaction.MainActivity"
-            android:exported="false"
             android:theme="@style/Theme.Transaction" />
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
@@ -173,22 +175,6 @@
                 android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
-
-        <receiver
-            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-            android:enabled="true"
-            android:exported="false" >
-        </receiver>
-
-        <service
-            android:name="com.google.android.gms.measurement.AppMeasurementService"
-            android:enabled="true"
-            android:exported="false" />
-        <service
-            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-            android:enabled="true"
-            android:exported="false"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
         <service
             android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
             android:enabled="true"
@@ -221,6 +207,27 @@
             android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
             android:visibleToInstantApps="true" />
 
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
             android:authorities="com.example.transaction.firebaseinitprovider"
@@ -228,10 +235,6 @@
             android:exported="false"
             android:initOrder="100" />
 
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name="androidx.compose.ui.tooling.PreviewActivity"
             android:exported="true" />

@@ -10,54 +10,58 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Transaction">
 
-        <!-- Launcher: Login Activity -->
+        <!-- 🚀 LAUNCHER / ROUTER ACTIVITY -->
+        <!-- Decides Dashboard vs MainMenu -->
         <activity
-            android:name=".login.LoginActivity"
-            android:exported="true">
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
-        <!-- Register Activity -->
-        <activity
-            android:name=".register.RegisterActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
-
-        <!-- Dashboard Activity -->
+        <!-- 🏠 DASHBOARD (before login) -->
         <activity
             android:name=".dashboard.DashboardActivity"
             android:exported="true"
             android:theme="@style/Theme.Transaction" />
 
-        <!-- Add Transaction -->
+        <!-- 🔐 LOGIN -->
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- 📝 REGISTER -->
+        <activity
+            android:name=".register.RegisterActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- 📋 MAIN MENU (after login) -->
+        <activity
+            android:name=".mainMenu.MainMenuActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- ➕ ADD TRANSACTION (salary display) -->
         <activity
             android:name=".add_trans1.AddTrans1Activity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Transaction" />
 
-        <!-- Categorization -->
+        <!-- 🧮 CATEGORIZATION -->
         <activity
             android:name=".add_trans2.CategorizationActivity"
             android:exported="true"
             android:theme="@style/Theme.Transaction" />
 
-        <!-- Graph & History -->
-        <activity
-            android:name=".graphHistory.GraphActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
-
-        <!-- View Expenses -->
-        <activity
-            android:name=".view_exp.ViewExpenseActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
-
-        <!-- Salary Input Activities -->
+        <!-- 💰 SALARY INPUT -->
         <activity
             android:name=".salaryInput.SalaryInputActivity"
             android:exported="true"
@@ -68,22 +72,22 @@
             android:exported="true"
             android:theme="@style/Theme.Transaction" />
 
-        <!-- Category -->
+        <!-- 📊 GRAPH & HISTORY -->
+        <activity
+            android:name=".graphHistory.GraphActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- 👀 VIEW EXPENSE -->
+        <activity
+            android:name=".view_exp.ViewExpenseActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- 🗂 CATEGORY -->
         <activity
             android:name=".CategoryActivity"
             android:exported="true"
-            android:theme="@style/Theme.Transaction" />
-
-        <!-- Main Menu -->
-        <activity
-            android:name=".mainMenu.MainMenuActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
-
-        <!-- Optional: MainActivity (launcher redirect or splash) -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"
             android:theme="@style/Theme.Transaction" />
 
     </application>
