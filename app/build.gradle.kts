@@ -65,6 +65,8 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")      // Email/password auth
     implementation("com.google.firebase:firebase-firestore") // Firestore DB
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
 
     // Google Sign-In
     implementation("com.google.android.gms:play-services-auth:20.7.0")

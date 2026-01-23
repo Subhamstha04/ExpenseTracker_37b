@@ -35,12 +35,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.Transaction" >
 
-        <!-- 🚀 LAUNCHER / ROUTER ACTIVITY -->
-        <!-- Decides Dashboard vs MainMenu -->
+        <!-- 🚀 MAIN ROUTER (Launcher) -->
         <activity
             android:name="com.example.transaction.MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" >
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,7 +46,7 @@
             </intent-filter>
         </activity>
 
-        <!-- 🏠 DASHBOARD (before login) -->
+        <!-- 🏠 DASHBOARD (Before Login) -->
         <activity
             android:name="com.example.transaction.dashboard.DashboardActivity"
             android:exported="true"
@@ -66,22 +64,9 @@
             android:exported="true"
             android:theme="@style/Theme.Transaction" />
 
-        <!-- 📋 MAIN MENU (after login) -->
+        <!-- 📋 MAIN MENU (After Login) -->
         <activity
             android:name="com.example.transaction.mainMenu.MainMenuActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
-
-        <!-- ➕ ADD TRANSACTION (salary display) -->
-        <activity
-            android:name="com.example.transaction.add_trans1.AddTrans1Activity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction"
-            android:windowSoftInputMode="adjustResize" />
-
-        <!-- 🧮 CATEGORIZATION -->
-        <activity
-            android:name="com.example.transaction.add_trans2.CategorizationActivity"
             android:exported="true"
             android:theme="@style/Theme.Transaction" />
 
@@ -92,6 +77,17 @@
             android:theme="@style/Theme.Transaction" />
         <activity
             android:name="com.example.transaction.salaryInput.SummaryActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- ➕ ADD TRANSACTION -->
+        <activity
+            android:name="com.example.transaction.add_trans1.AddTrans1Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.example.transaction.add_trans2.CategorizationActivity"
             android:exported="true"
             android:theme="@style/Theme.Transaction" />
 

@@ -1,42 +1,46 @@
 package com.example.transaction.graphHistory
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 
-// Event wrapper for one-time events
-class Event<out T>(private val content: T) {
+class GraphHistoryViewModel : ViewModel() {
 
-    private var hasBeenHandled = false
+    private val auth = FirebaseAuth.getInstance()
+    private val firestore = FirebaseFirestore.getInstance()
 
-    /** Returns the content if it hasn't been handled yet */
-    fun getContentIfNotHandled(): T? {
-        return if (hasBeenHandled) {
-            null
-        } else {
-            hasBeenHandled = true
-            content
-        }
-    }
+    private val _expenses = MutableStateFlow<List<GraphExpense>>(emptyList())
+    val expenses: StateFlow<List<GraphExpense>> = _expenses
 
-    /** Returns the content, even if it's already been handled */
-    fun peekContent(): T = content
-}
+    private val _error = MutableStateFlow<String?>(null)
+    val error: StateFlow<String?> = _error
 
-class GraphViewModel : ViewModel() {
+    fun loadExpenses() {
+        val user = auth.currentUser ?: return
 
-    private val _navigationEvent = MutableLiveData<Event<String>>()
-    val navigationEvent: LiveData<Event<String>> = _navigationEvent
+        firestore.collection("users")
+            .document(user.uid)
+            .get()
+            .addOnSuccessListener { doc ->
 
-    fun onBarGraphClicked() {
-        _navigationEvent.value = Event("BAR")
-    }
+                val expenseMap =
+                    doc.get("expenses") as? Map<String, Map<String, String>>
 
-    fun onLineGraphClicked() {
-        _navigationEvent.value = Event("LINE")
-    }
+                val list = expenseMap?.values?.mapNotNull {
+                    val name = it["name"]
+                    val price = it["price"]?.toIntOrNull()
 
-    fun onHistoryClicked() {
-        _navigationEvent.value = Event("HISTORY")
+                    if (name != null && price != null) {
+                        GraphExpense(name, price)
+                    } else null
+                } ?: emptyList()
+
+                _expenses.value = list
+            }
+            .addOnFailureListener {
+                _error.value = "Failed to load expenses"
+            }
     }
 }
