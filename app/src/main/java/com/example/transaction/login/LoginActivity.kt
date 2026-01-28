@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.runtime.*
 import com.example.transaction.mainMenu.MainMenuActivity
 import com.example.transaction.register.RegisterActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -18,63 +19,81 @@ class LoginActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         auth = FirebaseAuth.getInstance()
 
         setContent {
+
+            // 🔄 Compose loading state
+            var isLoading by remember { mutableStateOf(false) }
+
             LoginScreen(
+                isLoading = isLoading,
+
                 onLoginClicked = { email, password ->
-                    if (email.isNotBlank() && password.isNotBlank()) {
 
-                        auth.signInWithEmailAndPassword(email, password)
-                            .addOnCompleteListener { task ->
-                                if (task.isSuccessful) {
-
-                                    val user = auth.currentUser
-                                    if (user != null) {
-                                        firestore.collection("users")
-                                            .document(user.uid)
-                                            .set(
-                                                mapOf(
-                                                    "email" to user.email,
-                                                    "uid" to user.uid
-                                                ),
-                                                SetOptions.merge()
-                                            )
-                                    }
-
-                                    Toast.makeText(
-                                        this,
-                                        "Login successful!",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-
-                                    startActivity(
-                                        Intent(this, MainMenuActivity::class.java)
-                                    )
-                                    finish()
-
-                                } else {
-                                    Toast.makeText(
-                                        this,
-                                        task.exception?.localizedMessage ?: "Login failed",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-                                }
-                            }
-
-                    } else {
+                    if (email.isBlank() || password.isBlank()) {
                         Toast.makeText(
                             this,
                             "Please fill both fields",
                             Toast.LENGTH_SHORT
                         ).show()
+                        return@LoginScreen
                     }
+
+                    isLoading = true
+
+                    auth.signInWithEmailAndPassword(email, password)
+                        .addOnCompleteListener { task ->
+
+                            isLoading = false
+
+                            if (task.isSuccessful) {
+
+                                val user = auth.currentUser
+                                if (user != null) {
+                                    firestore.collection("users")
+                                        .document(user.uid)
+                                        .set(
+                                            mapOf(
+                                                "email" to user.email,
+                                                "uid" to user.uid
+                                            ),
+                                            SetOptions.merge() // 🔒 salary safe
+                                        )
+                                }
+
+                                Toast.makeText(
+                                    this,
+                                    "Login successful!",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+
+                                startActivity(
+                                    Intent(
+                                        this,
+                                        MainMenuActivity::class.java
+                                    )
+                                )
+                                finish()
+
+                            } else {
+                                Toast.makeText(
+                                    this,
+                                    task.exception?.localizedMessage
+                                        ?: "Login failed",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                        }
                 },
+
                 onSignUpClicked = {
                     startActivity(
                         Intent(this, RegisterActivity::class.java)
                     )
                 },
+
                 onForgotPasswordClicked = {
                     startActivity(
                         Intent(this, ForgotPasswordActivity::class.java)
