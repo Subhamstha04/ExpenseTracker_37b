@@ -22,7 +22,7 @@ fun LoginScreen(
     isLoading: Boolean,
     onLoginClicked: (email: String, password: String) -> Unit,
     onSignUpClicked: () -> Unit,
-    onForgotPasswordClicked: () -> Unit   // ✅ FIX ADDED
+    onForgotPasswordClicked: () -> Unit
 ) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }

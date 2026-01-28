@@ -22,7 +22,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import kotlinx.coroutines.launch
 import java.io.OutputStreamWriter
 
-// ---------------- PRICE RANGE MODEL ----------------
 data class PriceRange(val label: String, val min: Int, val max: Int?)
 
 val priceRanges = listOf(
