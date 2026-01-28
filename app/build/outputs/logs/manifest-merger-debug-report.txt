@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:2:1-93:12
-INJECTED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:2:1-93:12
-INJECTED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:2:1-93:12
-INJECTED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:2:1-93:12
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:2:1-102:12
+INJECTED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:2:1-102:12
+INJECTED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:2:1-102:12
+INJECTED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:2:1-102:12
 MERGED from [androidx.databinding:viewbinding:8.7.3] C:\Users\regmi\.gradle\caches\8.13\transforms\9da46c2a2570c02af1c949c17301c1ed\transformed\viewbinding-8.7.3\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\regmi\.gradle\caches\8.13\transforms\b0ff75dfadd50b4d97e7c004f0364f9b\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\regmi\.gradle\caches\8.13\transforms\e1412de97d76f9550675ebd65e8dc9f5\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
@@ -130,8 +130,8 @@ MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\regmi\.gradle\c
 	xmlns:android
 		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:3:5-63
 application
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:6:5-91:19
-INJECTED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:6:5-91:19
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:6:5-100:19
+INJECTED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:6:5-100:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\regmi\.gradle\caches\8.13\transforms\b0ff75dfadd50b4d97e7c004f0364f9b\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\regmi\.gradle\caches\8.13\transforms\b0ff75dfadd50b4d97e7c004f0364f9b\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\regmi\.gradle\caches\8.13\transforms\26b7e017747465a1642a6eecaec8413c\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
@@ -215,111 +215,127 @@ MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\regmi\.gradle\c
 	android:theme
 		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:12:9-49
 activity#com.example.transaction.MainActivity
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:15:9-24:20
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:15:9-22:20
 	android:exported
 		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:17:13-36
 	android:name
 		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:16:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:19:13-22:29
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:18:13-21:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:21:17-77
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:21:27-74
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:20:27-74
 activity#com.example.transaction.dashboard.DashboardActivity
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:27:9-30:56
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:25:9-28:56
 	android:exported
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:29:13-36
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:27:13-36
 	android:theme
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:30:13-53
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:28:13-53
 	android:name
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:28:13-56
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:26:13-56
 activity#com.example.transaction.login.LoginActivity
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:33:9-36:56
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:31:9-34:56
 	android:exported
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:35:13-36
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:33:13-36
 	android:theme
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:36:13-53
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:34:13-53
 	android:name
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:34:13-48
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:32:13-48
+activity#com.example.transaction.login.ForgotPasswordActivity
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:37:9-40:56
+	android:exported
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:39:13-36
+	android:theme
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:40:13-53
+	android:name
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:38:13-57
+activity#com.example.transaction.login.ResetPasswordActivity
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:42:9-45:56
+	android:exported
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:44:13-36
+	android:theme
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:45:13-53
+	android:name
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:43:13-56
 activity#com.example.transaction.register.RegisterActivity
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:39:9-42:56
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:48:9-51:56
 	android:exported
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:41:13-36
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:50:13-36
 	android:theme
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:42:13-53
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:51:13-53
 	android:name
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:40:13-54
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:49:13-54
 activity#com.example.transaction.mainMenu.MainMenuActivity
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:45:9-48:56
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:54:9-57:56
 	android:exported
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:47:13-36
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:56:13-36
 	android:theme
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:48:13-53
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:57:13-53
 	android:name
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:46:13-54
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:55:13-54
 activity#com.example.transaction.salaryInput.SalaryInputActivity
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:51:9-54:56
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:60:9-63:56
 	android:exported
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:53:13-36
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:62:13-36
 	android:theme
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:54:13-53
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:63:13-53
 	android:name
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:52:13-60
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:61:13-60
 activity#com.example.transaction.salaryInput.SummaryActivity
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:56:9-59:56
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:65:9-68:56
 	android:exported
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:58:13-36
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:67:13-36
 	android:theme
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:59:13-53
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:68:13-53
 	android:name
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:57:13-56
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:66:13-56
 activity#com.example.transaction.add_trans1.AddTrans1Activity
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:62:9-66:56
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:71:9-75:56
 	android:windowSoftInputMode
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:65:13-55
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:74:13-55
 	android:exported
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:64:13-36
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:73:13-36
 	android:theme
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:66:13-53
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:75:13-53
 	android:name
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:63:13-57
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:72:13-57
 activity#com.example.transaction.add_trans2.CategorizationActivity
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:68:9-71:56
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:77:9-80:56
 	android:exported
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:70:13-36
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:79:13-36
 	android:theme
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:71:13-53
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:80:13-53
 	android:name
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:69:13-62
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:78:13-62
 activity#com.example.transaction.graphHistory.GraphActivity
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:74:9-77:56
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:83:9-86:56
 	android:exported
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:76:13-36
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:85:13-36
 	android:theme
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:77:13-53
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:86:13-53
 	android:name
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:75:13-55
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:84:13-55
 activity#com.example.transaction.view_exp.ViewExpenseActivity
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:80:9-83:56
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:89:9-92:56
 	android:exported
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:82:13-36
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:91:13-36
 	android:theme
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:83:13-53
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:92:13-53
 	android:name
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:81:13-57
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:90:13-57
 activity#com.example.transaction.CategoryActivity
-ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:86:9-89:56
+ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:95:9-98:56
 	android:exported
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:88:13-36
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:97:13-36
 	android:theme
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:89:13-53
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:98:13-53
 	android:name
-		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:87:13-45
+		ADDED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml:96:13-45
 uses-sdk
 INJECTED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\regmi\AndroidStudioProjects\ExpenseTracker_37b\app\src\main\AndroidManifest.xml

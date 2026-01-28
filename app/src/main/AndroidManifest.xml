@@ -15,12 +15,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <!-- 🏠 DASHBOARD (Before Login) -->
@@ -32,6 +30,17 @@
         <!-- 🔐 LOGIN -->
         <activity
             android:name=".login.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <!-- 🔑 FORGOT / RESET PASSWORD -->
+        <activity
+            android:name=".login.ForgotPasswordActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
+        <activity
+            android:name=".login.ResetPasswordActivity"
             android:exported="true"
             android:theme="@style/Theme.Transaction" />
 

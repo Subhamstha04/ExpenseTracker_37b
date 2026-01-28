@@ -58,6 +58,16 @@
             android:exported="true"
             android:theme="@style/Theme.Transaction" />
 
+        <!-- 🔑 FORGOT / RESET PASSWORD -->
+        <activity
+            android:name="com.example.transaction.login.ForgotPasswordActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+        <activity
+            android:name="com.example.transaction.login.ResetPasswordActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transaction" />
+
         <!-- 📝 REGISTER -->
         <activity
             android:name="com.example.transaction.register.RegisterActivity"

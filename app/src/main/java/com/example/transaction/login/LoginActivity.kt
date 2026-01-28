@@ -25,15 +25,12 @@ class LoginActivity : ComponentActivity() {
                 onLoginClicked = { email, password ->
                     if (email.isNotBlank() && password.isNotBlank()) {
 
-                        // 🔐 Firebase login
                         auth.signInWithEmailAndPassword(email, password)
                             .addOnCompleteListener { task ->
                                 if (task.isSuccessful) {
 
                                     val user = auth.currentUser
                                     if (user != null) {
-
-                                        // ✅ VERY IMPORTANT: merge = true (DOES NOT DELETE salary)
                                         firestore.collection("users")
                                             .document(user.uid)
                                             .set(
@@ -76,6 +73,11 @@ class LoginActivity : ComponentActivity() {
                 onSignUpClicked = {
                     startActivity(
                         Intent(this, RegisterActivity::class.java)
+                    )
+                },
+                onForgotPasswordClicked = {
+                    startActivity(
+                        Intent(this, ForgotPasswordActivity::class.java)
                     )
                 }
             )
