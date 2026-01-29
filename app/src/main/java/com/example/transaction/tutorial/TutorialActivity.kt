@@ -28,11 +28,6 @@ class TutorialActivity : ComponentActivity() {
     }
 }
 
-/**
- * ✅ Opt-in applied ONLY where required
- * This removes:
- * "This material API is experimental..."
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TutorialScreen(onBack: () -> Unit) {
