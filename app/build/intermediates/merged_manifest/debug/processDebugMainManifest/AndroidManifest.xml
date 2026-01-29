@@ -35,7 +35,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.Transaction" >
 
-        <!-- 🚀 MAIN ROUTER (Launcher) -->
+        <!-- 🚀 Launcher / Entry Point -->
         <activity
             android:name="com.example.transaction.MainActivity"
             android:exported="true" >
@@ -46,78 +46,66 @@
             </intent-filter>
         </activity>
 
-        <!-- 🏠 DASHBOARD (Before Login) -->
+        <!-- 🏠 Dashboard (Before Login) -->
         <activity
             android:name="com.example.transaction.dashboard.DashboardActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
+            android:exported="true" />
 
-        <!-- 🔐 LOGIN -->
+        <!-- 🔐 Authentication -->
         <activity
             android:name="com.example.transaction.login.LoginActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
-
-        <!-- 🔑 FORGOT / RESET PASSWORD -->
+            android:exported="true" />
         <activity
             android:name="com.example.transaction.login.ForgotPasswordActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
+            android:exported="true" />
         <activity
             android:name="com.example.transaction.login.ResetPasswordActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
-
-        <!-- 📝 REGISTER -->
+            android:exported="true" />
         <activity
             android:name="com.example.transaction.register.RegisterActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
+            android:exported="true" />
 
-        <!-- 📋 MAIN MENU (After Login) -->
+        <!-- 📋 Main Menu (After Login) -->
         <activity
             android:name="com.example.transaction.mainMenu.MainMenuActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
+            android:exported="true" />
 
-        <!-- 💰 SALARY INPUT -->
+        <!-- 💰 Salary Flow -->
         <activity
             android:name="com.example.transaction.salaryInput.SalaryInputActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
+            android:exported="true" />
         <activity
             android:name="com.example.transaction.salaryInput.SummaryActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
+            android:exported="true" />
 
-        <!-- ➕ ADD TRANSACTION -->
+        <!-- ➕ Add Transaction -->
         <activity
             android:name="com.example.transaction.add_trans1.AddTrans1Activity"
             android:exported="true"
-            android:theme="@style/Theme.Transaction"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.example.transaction.add_trans2.CategorizationActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
+            android:exported="true" />
 
-        <!-- 📊 GRAPH & HISTORY -->
+        <!-- 📊 Graphs & History -->
         <activity
             android:name="com.example.transaction.graphHistory.GraphActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
+            android:exported="true" />
 
-        <!-- 👀 VIEW EXPENSE -->
+        <!-- 👀 View Expenses -->
         <activity
             android:name="com.example.transaction.view_exp.ViewExpenseActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
+            android:exported="true" />
 
-        <!-- 🗂 CATEGORY -->
+        <!-- 🗂 Categories -->
         <activity
             android:name="com.example.transaction.CategoryActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Transaction" />
+            android:exported="true" />
+
+        <!-- 📘 Tutorial -->
+        <activity
+            android:name="com.example.transaction.tutorial.TutorialActivity"
+            android:exported="true" />
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"
