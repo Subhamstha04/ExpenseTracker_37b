@@ -108,7 +108,7 @@ class RegisterActivity : ComponentActivity() {
                                         if (task.isSuccessful) {
                                             Toast.makeText(
                                                 this@RegisterActivity,
-                                                "Registered successfully!",
+                                                "registered successfully!",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                             finish() // Close registration
