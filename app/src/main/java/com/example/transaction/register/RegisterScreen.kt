@@ -84,7 +84,7 @@ fun RegisterScreen(
         OutlinedTextField(
             value = confirmPassword,
             onValueChange = { onClearError(); onConfirmPasswordChange(it) },
-            label = { Text("Confirm Password") },
+            label = { Text("confirm Password") },
             visualTransformation = if (confirmVisible) VisualTransformation.None else PasswordVisualTransformation(),
             trailingIcon = {
                 IconButton(onClick = { confirmVisible = !confirmVisible }) {
