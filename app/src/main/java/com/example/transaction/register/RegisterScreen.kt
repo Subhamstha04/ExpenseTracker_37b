@@ -44,7 +44,7 @@ fun RegisterScreen(
         Spacer(modifier = Modifier.height(40.dp))
 
         Text(
-            text = "Register",
+            text = "register",
             fontSize = 28.sp,
             color = Color(0xFF4CAF50)
         )
