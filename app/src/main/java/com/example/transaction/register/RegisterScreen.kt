@@ -127,7 +127,7 @@ fun RegisterScreen(
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFDB4437)),
             shape = RoundedCornerShape(12.dp)
         ) {
-            Text("Google", color = Color.White)
+            Text("google", color = Color.White)
         }
     }
 }
