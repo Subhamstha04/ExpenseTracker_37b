@@ -55,7 +55,7 @@ class RegisterActivity : ComponentActivity() {
                 OutlinedTextField(
                     value = email,
                     onValueChange = { email = it },
-                    label = { Text("Email") },
+                    label = { Text("email") },
                     modifier = Modifier.fillMaxWidth()
                 )
 
